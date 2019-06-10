@@ -35,6 +35,7 @@ INSTALLDIR="/opt/${PN}"
 src_unpack() {
 	ar xf ${A}
 	unpack data.tar.gz
+	echo ${S}
 }
 
 src_prepare() {
