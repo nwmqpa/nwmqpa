@@ -34,7 +34,10 @@ INSTALLDIR="/opt/${PN}"
 
 src_unpack() {
 	ar xf ${DISTDIR}/${A}
+	pwd
 	cd ${WORKDIR}
+	pwd
+	ls
 	unpack data.tar.xz
 }
 
