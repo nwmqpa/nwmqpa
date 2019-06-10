@@ -35,8 +35,7 @@ INSTALLDIR="/opt/${PN}"
 src_unpack() {
 	ar xf ${DISTDIR}/${A}
 	rm -f ${WORKDIR}/control.tar.gz ${WORKDIR}/debian-binary
-	mv ${WORKDIR}/data.tar.xz ${DISTDIR}
-	unpack data.tar.xz
+	tar xvf data.tar.xz
 }
 
 src_prepare() {
