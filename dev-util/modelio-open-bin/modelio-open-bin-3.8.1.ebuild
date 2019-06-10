@@ -33,9 +33,8 @@ S="${WORKDIR}/usr/lib/modelio-open-source${MYVERBAS}"
 INSTALLDIR="/opt/${PN}"
 
 src_unpack() {
-	ar xf ${A}
+	ar xf ${DISTDIR}/${A}
 	unpack data.tar.gz
-	echo ${S}
 }
 
 src_prepare() {
