@@ -8,15 +8,14 @@ inherit eutils
 
 MYPNMAIN="${PN%%-bin}"
 MYVERMAJ="${PV%%_p*}"
-MYVERMIN="${PV##*_p}"
 MYVERBAS="${MYVERMAJ%.*}"
 
 DESCRIPTION="An open source modeling environment"
 HOMEPAGE="http://www.modelio.org/"
-SRC_URI_PREFIX="mirror://sourceforge/modeliouml/${MYVERMAJ}/${MYPNMAIN}-${MYVERMIN}"
+SRC_URI_PREFIX="mirror://sourceforge/modeliouml/${MYVERMAJ}/${MYPNMAIN}-source${MYVERBAS}_${MYVERMAJ}"
 SRC_URI="\
-	x86?	( ${SRC_URI_PREFIX}-linux.gtk.x86.tar.gz )
-	amd64?	( ${SRC_URI_PREFIX}-linux.gtk.x86_64.tar.gz )"
+	x86?	( ${SRC_URI_PREFIX}_i386.deb )
+	amd64?	( ${SRC_URI_PREFIX}_amd64.deb )"
 LICENSE="GPL-3 APL-1.0"
 SLOT="0"
 RESTRICT="mirror"
@@ -30,8 +29,13 @@ RDEPEND=">=virtual/jre-1.8"
 RDEPEND="${RDEPEND}
     net-libs/xulrunner-bin:1.9.2"
 
-S="${WORKDIR}/Modelio ${MYVERBAS}"
+S="${WORKDIR}/usr/lib/modelio-open-source${MYVERBAS}"
 INSTALLDIR="/opt/${PN}"
+
+src_unpack() {
+	ar xf ${A}
+	unpack data.tar.gz
+}
 
 src_prepare() {
 	# remove bundled Java
@@ -48,7 +52,7 @@ src_install() {
 	dodir /usr/bin
 	cat <<END >"${D}/usr/bin/${MYPNMAIN}"
 #!/bin/sh
-exec ${INSTALLDIR}/modelio -data ~/modelio \$@
+exec ${INSTALLDIR}/modelio -data ~/.modelio \$@
 END
 	fperms 755 "/usr/bin/${MYPNMAIN}"
 	make_desktop_entry "${MYPNMAIN}" "Modelio Open ${MYVERMAJ}" "${INSTALLDIR}/icon.xpm" "Development;IDE"
