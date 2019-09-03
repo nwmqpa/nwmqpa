@@ -34,7 +34,7 @@ src_install(){
 	cd clion-${PV}
 	insinto "/opt/${PN}"
 	doins -r *
-	dosym "/opt/${PN}/bin/clion.sh" "/usr/bin/clion.sh"
+	dosym "/opt/${PN}/bin/clion.sh" "/usr/bin/clion"
 	insinto "/usr/share/applications"
 	doins ${FILESDIR}/jetbrains-${PN}.desktop
 	insinto "/usr/share/pixmaps"
