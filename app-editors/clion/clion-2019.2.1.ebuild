@@ -40,5 +40,7 @@ src_install(){
 	insinto "/usr/share/pixmaps"
 	doins ${FILESDIR}/${PN}.png
 	fperms +x "/opt/${PN}/bin/clion.sh"
+	fperms +x "/opt/${PN}/bin/fsnotifier"
+	fperms +x "/opt/${PN}/bin/fsnotifier64"
 }
 
