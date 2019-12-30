@@ -11,7 +11,7 @@ def get_visual_studio_code_versions():
     tags = filter(lambda x: x is not None, tags)
     tags = map(lambda x: x.groups()[0], tags)
     tags = map(lambda x: version.parse(x), tags)
-    tags = filter(lambda x: x >= version.parse("1.0.0"), tags)
+    tags = filter(lambda x: x >= version.parse("1.0.0") and x != version.parse("1.7.0"), tags)
     tags = sorted(tags)
     return [str(tag) for tag in tags]
 
@@ -34,8 +34,8 @@ def update(package: str):
     print("New versions to be added to {}:\n\t{}".format(package_name, "\n\t".join(to_add_versions)))
     for version in to_add_versions:
         os.system("cp {0}/ebuild.sample {0}/{1}-{2}.ebuild".format(package, package.split("/")[-1], version))
-        os.system("cd {0} && ebuild manifest {1}-{2}.ebuild".format(package, package.split("/")[-1], version))
-    os.system("git add . && git commit -m \"{0}: Added v{1}\"".format(package.split("/")[-1], ", v".join(version)))
+        os.system("cd {0} && sudo ebuild {1}-{2}.ebuild manifest".format(package, package.split("/")[-1], version))
+    os.system("git add . && git commit -m \"{0}: Added v{1}\"".format(package.split("/")[-1], ", v".join(to_add_versions)))
 
 
 def main():
