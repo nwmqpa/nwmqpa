@@ -35,7 +35,7 @@ def update(package: str):
     for version in to_add_versions:
         os.system("cp {0}/ebuild.sample {0}/{1}-{2}.ebuild".format(package, package.split("/")[-1], version))
         os.system("cd {0} && sudo ebuild {1}-{2}.ebuild manifest".format(package, package.split("/")[-1], version))
-    os.system("git add . && git commit -m \"{0}: Added v{1}\"".format(package.split("/")[-1], ", v".join(to_add_versions)))
+    os.system("git add {} && git commit -m \"{0}: Added v{1}\"".format(package, package.split("/")[-1], ", v".join(to_add_versions)))
 
 
 def main():
