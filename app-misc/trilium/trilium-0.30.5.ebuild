@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="Personal knowledge base"
 HOMEPAGE="https://github.com/zadam/trilium"
 SRC_URI="
-	amd64? ( ${HOMEPAGE}/releases/download/v${PV}/trilium-linux-x64-${PV}.tar.xz -> ${P}-amd64.tar.gz )
+	amd64? ( ${HOMEPAGE}/releases/download/v${PV}/trilium-linux-x64-${PV}.tar.xz -> ${P}-amd64.tar.xz )
 	"
 RESTRICT="mirror"
 
