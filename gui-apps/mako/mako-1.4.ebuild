@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit eutils meson readme.gentoo-r1
+inherit eutils meson
 
 DESCRIPTION="A lightweight Wayland notification daemon"
 HOMEPAGE="https://wayland.emersion.fr/mako"
@@ -33,9 +33,4 @@ src_configure() {
 
 src_install() {
 	meson_src_install
-	readme.gentoo_create_doc
-}
-
-pkg_postinst() {
-	readme.gentoo_print_elog
 }
