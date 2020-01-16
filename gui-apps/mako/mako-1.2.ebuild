@@ -27,8 +27,6 @@ BDEPEND="
 	dev-util/meson
 "
 
-S="${WORKDIR}"
-
 src_configure() {
 	meson_src_configure
 }
