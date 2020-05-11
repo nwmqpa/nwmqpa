@@ -4,7 +4,7 @@ import subprocess
 from packaging import version
 
 def get_jetbrains_mono_versions():
-    tags = subprocess.check_output(["git", "ls-remote", "--tags", "git@github.com:JetBrains/JetBrainsMono"]).decode()
+    tags = subprocess.check_output(["git", "ls-remote", "--tags", "https://github.com/JetBrains/JetBrainsMono"]).decode()
     tags = filter(len, tags.split("\n"))
     tags = map(lambda x: x.split("\t")[1], tags)
     tags = map(lambda x: re.search(r"^refs/tags/v(([0-9]+.?)+)$", x), tags)
@@ -15,7 +15,7 @@ def get_jetbrains_mono_versions():
     return [str(tag) for tag in tags]
 
 def get_mako_versions():
-    tags = subprocess.check_output(["git", "ls-remote", "--tags", "git@github.com:emersion/mako"]).decode()
+    tags = subprocess.check_output(["git", "ls-remote", "--tags", "https://github.com/emersion/mako"]).decode()
     tags = filter(len, tags.split("\n"))
     tags = map(lambda x: x.split("\t")[1], tags)
     tags = map(lambda x: re.search(r"^refs/tags/v(([0-9]+.?)+)$", x), tags)
@@ -26,7 +26,7 @@ def get_mako_versions():
     return [str(tag) for tag in tags]
 
 def get_visual_studio_code_versions():
-    tags = subprocess.check_output(["git", "ls-remote", "--tags", "git@github.com:microsoft/vscode"]).decode()
+    tags = subprocess.check_output(["git", "ls-remote", "--tags", "https://github.com/microsoft/vscode"]).decode()
     tags = filter(len, tags.split("\n"))
     tags = map(lambda x: x.split("\t")[1], tags)
     tags = map(lambda x: re.search(r"^refs/tags/(([0-9]+.?)+)$", x), tags)
@@ -38,7 +38,7 @@ def get_visual_studio_code_versions():
     return [str(tag) for tag in tags]
 
 def get_trilium_versions():
-    tags = subprocess.check_output(["git", "ls-remote", "--tags", "git@github.com:zadam/trilium"]).decode()
+    tags = subprocess.check_output(["git", "ls-remote", "--tags", "https://github.com/zadam/trilium"]).decode()
     tags = filter(len, tags.split("\n"))
     tags = map(lambda x: x.split("\t")[1], tags)
     tags = map(lambda x: re.search(r"^refs/tags/v(([0-9]+.?)+)$", x), tags)
