@@ -24,7 +24,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run modification script
-      run: python script.py
+      run: python3 script.py
 
     - name: Push changes
       uses: ad-m/github-push-action@master
