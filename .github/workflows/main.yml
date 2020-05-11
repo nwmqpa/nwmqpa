@@ -25,6 +25,12 @@ jobs:
     # Runs a single command using the runners shell
     - name: Install packaging
       run: pip3 install packaging
+    
+    - name: Setup Git Username
+      run: git config user.name "Github Actions"
+    
+    - name: Setup Git Email
+      run: git config user.email "actions@github.com"
 
     - name: Run modification script
       run: python3 script.py
