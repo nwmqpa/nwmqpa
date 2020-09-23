@@ -4,13 +4,13 @@
 	<repo quality="experimental" status="unofficial">
 		<name>nwmqpa</name>
 		<description>Nwmqpa's Gentoo Overlay</description>
-		<homepage>https://github.com/nwmqpa/nwmqpa</homepage>
+		<homepage>https://github.com/nwmqpa/overlay</homepage>
 		<owner type="project">
-			<email>nwmqpa at gmail.com</email>
+			<email>thomas.nicollet@nebulis.io</email>
 			<name>Thomas Nicollet</name>
 		</owner>
-		<source type="git">https://github.com/nwmqpa/nwmqpa.git</source>
-		<source type="git">git+ssh://git@github.com:nwmqpa/nwmqpa.git</source>
-		<feed>https://github.com/nwmqpa/nwmqpa/commits/master.atom</feed>
+		<source type="git">https://github.com/nwmqpa/overlay.git</source>
+		<source type="git">git+ssh://git@github.com:nwmqpa/overlay.git</source>
+		<feed>https://github.com/nwmqpa/overlay/commits/master.atom</feed>
 	</repo>
 </repositories>
