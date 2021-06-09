@@ -4,12 +4,12 @@
 
 You can contact me on several emails:
 
-* (thomas.nicollet@epitech.eu)[mailto:thomas.nicollet@epitech.eu] For any inquiries regarding the repositories hosted in my name
-* (thomas.nicollet@nebulis.io)[mailto:thomas.nicollet@nebulis.io] For work opportunities and freelance offers
+* [thomas.nicollet@epitech.eu](mailto:thomas.nicollet@epitech.eu) For any inquiries regarding the repositories hosted in my name
+* [thomas.nicollet@nebulis.io](mailto:thomas.nicollet@nebulis.io) For work opportunities and freelance offers
 
 Do not attempt to contact me by phone except if prior arrangements has been made, as I'm often travelling, and as such, in different timezones.
 
-You can also contact me on telegram (@nwmqpa)[https://t.me/nwmqpa]
+You can also contact me on telegram [@nwmqpa](https://t.me/nwmqpa)
 
 ## About Me
 
@@ -54,13 +54,13 @@ As stated above, I'm free for hire in a variety of subjects, and in the language
 
 If the language/framework you are interested in hiring me for isn't listed, feel free to contact me either way, as I didn't listed a lot as to not supercharge this profile.
 
-Here is my (malt profile)[https://www.malt.fr/profile/thomasnicollet1] with the recommandations from several clients.
+Here is my [malt profile](https://www.malt.fr/profile/thomasnicollet1) with the recommandations from several clients.
 
 ## Nebulis
 
 Nebulis is a freelance collective founded in Sept. 2019, which helps companies transition to cloud technologies, by doing developement, cloud architecture and devops to suit their needs.
 
-If you interested, or have business inquiries, feel free to check (our website)[https://nebulis.io].
+If you interested, or have business inquiries, feel free to check [our website](https://nebulis.io).
 
 ## Trophies
 
